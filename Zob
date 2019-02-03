@@ -1,0 +1,1075 @@
+# **************************************************************************** #
+#                                                           LE - /             #
+#                                                               /              #
+#    Zob                                              .::    .:/ .      .::    #
+#                                                  +:+:+   +:    +:  +:+:+     #
+#    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
+#                                                  #+#   #+    #+    #+#       #
+#    Created: 2019/01/29 15:46:30 by cgarrot      #+#   ##    ##    #+#        #
+#    Updated: 2019/02/03 05:19:44 by cgarrot     ###    #+. /#+    ###.fr      #
+#                                                          /                   #
+#                                                         /                    #
+# **************************************************************************** #
+
+# Text format
+_DEF='\033[0m'
+_GRAS='\033[1m'
+_SOUL='\033[4m'
+_CLIG='\033[5m'
+_SURL='\033[7m'
+
+# Colors
+BLACK='\033[30m'
+RED='\033[31m'
+GREEN='\033[32m'
+YELLOW='\033[33m'
+BLUE='\033[34m'
+PURPLE='\033[35m'
+CYAN='\033[36m'
+GREY='\033[37m'
+W='\x1b[37m'
+
+# Background
+_IBLACK='\033[40m'
+_IRED='\033[41m'
+_IGREEN='\033[42m'
+_IYELLOW='\033[43m'
+_IBLUE='\033[44m'
+_IPURPLE='\033[45m'
+_ICYAN='\033[46m'
+_IGREY='\033[47m'
+
+# Start PWD
+SPWD=$(pwd)
+
+function multipla()
+{
+	clear
+	printf "$RED""                                                                            ___ \n"
+	printf "                                       _____________________________________ //  \n"
+	printf "                                    / /-----------|  |----------| |--------- \ \n"
+	printf "                                  / /             |  |          | |           \ \n"
+	printf "                                / /               |  |          | |           | \n"
+	printf "                     _________/ /                 |  |          | |           | \n"
+	printf "            _______"
+	printf "$YELLOW""("
+	printf "$RED""|___________\_________________|  |----------===============\  \n"
+	printf "$RED""          /                  |           (=)       |           (=)|            "
+	printf "$YELLOW""/\ \n"
+	printf "$RED""        /                   |      "
+	printf "$PURPLE""cgarrot"
+	printf "$RED""        |                |           "
+	printf "$YELLOW""\/"
+	printf "$RED""\ \n"
+	printf "$RED""       /"
+	printf "$YELLOW""<>"
+	printf "$RED""      ________    |           "
+	printf "$PURPLE""Script"
+	printf "$RED""    |                |________      \ \n"
+	printf "$RED""       |      /  "
+	printf "$W""______"
+	printf "$RED""  \   |  <==================|===========>  /  "
+	printf "$W""______"
+	printf "$RED""  \   -/  \n"
+	printf "$RED""       |)    |  "
+	printf "$W""/ \  / \ "
+	printf "$RED"" |__|_____________________|_____________|  "
+	printf "$W""/ \  / \ "
+	printf "$RED"" | [ \n"
+	printf "$RED""       \____ | "
+	printf "$W""|   ()   | "
+	printf "$RED""|______________________________________| "
+	printf "$W""|   ()   | "
+	printf "$RED""|_/ \n"
+	printf "$W""                \_/__\_/                                            \_/__\_/ \n"
+	sleep 0.5
+	clear
+	printf "$RED""                                                                           ___ \n"
+	printf "                                     _____________________________________ //  \n"
+	printf "                                   / /-----------|  |----------| |--------- \ \n"
+	printf "                                 / /             |  |          | |           \ \n"
+	printf "                               / /               |  |          | |           | \n"
+	printf "                    _________/ /                 |  |          | |           | \n"
+	printf "           _______"
+	printf "$YELLOW""("
+	printf "$RED""|___________\_________________|  |----------===============\  \n"
+	printf "$RED""         /                  |           (=)       |           (=)|            "
+	printf "$YELLOW""/\ \n"
+	printf "$RED""       /                   |      "
+	printf "$PURPLE""cgarrot"
+	printf "$RED""        |                |           "
+	printf "$YELLOW""\/"
+	printf "$RED""\ \n"
+	printf "$RED""      /"
+	printf "$YELLOW""<>"
+	printf "$RED""      ________    |           "
+	printf "$PURPLE""Script"
+	printf "$RED""    |                |________      \ \n"
+	printf "$RED""      |      /  "
+	printf "$W""______"
+	printf "$RED""  \   |  <==================|===========>  /  "
+	printf "$W""______"
+	printf "$RED""  \   -/  \n"
+	printf "$RED""      |)    |  "
+	printf "$W""/  ||  \ "
+	printf "$RED"" |__|_____________________|_____________|  "
+	printf "$W""/  ||  \ "
+	printf "$RED"" | [ "
+	printf "$W""(@)\n"
+	printf "$RED""      \____ | "
+	printf "$W""|---()---| "
+	printf "$RED""|______________________________________| "
+	printf "$W""|---()---| "
+	printf "$RED""|_/ \n"
+	printf "$W""               \__||__/                                            \__||__/ \n"
+	sleep 0.5
+	clear
+	printf "$RED""                                                                          ___ \n"
+	printf "                                    _____________________________________ //  \n"
+	printf "                                  / /-----------|  |----------| |--------- \ \n"
+	printf "                                / /             |  |          | |           \ \n"
+	printf "                              / /               |  |          | |           | \n"
+	printf "                   _________/ /                 |  |          | |           | \n"
+	printf "          _______"
+	printf "$YELLOW""("
+	printf "$RED""|___________\_________________|  |----------===============\  \n"
+	printf "$RED""        /                  |           (=)       |           (=)|            "
+	printf "$YELLOW""/\ \n"
+	printf "$RED""      /                   |      "
+	printf "$PURPLE""cgarrot"
+	printf "$RED""        |                |           "
+	printf "$YELLOW""\/"
+	printf "$RED""\ \n"
+	printf "$RED""     /"
+	printf "$YELLOW""<>"
+	printf "$RED""      ________    |           "
+	printf "$PURPLE""Script"
+	printf "$RED""    |                |________      \ \n"
+	printf "$RED""     |      /  "
+	printf "$W""______"
+	printf "$RED""  \   |  <==================|===========>  /  "
+	printf "$W""______"
+	printf "$RED""  \   -/   "
+	printf "$W""(@)\n"
+	printf "$RED""     |)    |  "
+	printf "$W""/ \  / \ "
+	printf "$RED"" |__|_____________________|_____________|  "
+	printf "$W""/ \  / \ "
+	printf "$RED"" | [ "
+	printf "$W""(@)\n"
+	printf "$RED""     \____ | "
+	printf "$W""|   ()   | "
+	printf "$RED""|______________________________________| "
+	printf "$W""|   ()   | "
+	printf "$RED""|_/ \n"
+	printf "$W""              \_/__\_/                                            \_/__\_/ \n"
+	sleep 0.5
+	clear
+	printf "$RED""                                                                         ___ \n"
+	printf "                                   _____________________________________ //  \n"
+	printf "                                 / /-----------|  |----------| |--------- \ \n"
+	printf "                               / /             |  |          | |           \ \n"
+	printf "                             / /               |  |          | |           | \n"
+	printf "                  _________/ /                 |  |          | |           | \n"
+	printf "         _______"
+	printf "$YELLOW""("
+	printf "$RED""|___________\_________________|  |----------===============\  \n"
+	printf "$RED""       /                  |           (=)       |           (=)|            "
+	printf "$YELLOW""/\ \n"
+	printf "$RED""     /                   |      "
+	printf "$PURPLE""cgarrot"
+	printf "$RED""        |                |           "
+	printf "$YELLOW""\/"
+	printf "$RED""\ \n"
+	printf "$RED""    /"
+	printf "$YELLOW""<>"
+	printf "$RED""      ________    |           "
+	printf "$PURPLE""Script"
+	printf "$RED""    |                |________      \     "
+	printf "$W""(@)\n"
+	printf "$RED""    |      /  "
+	printf "$W""______"
+	printf "$RED""  \   |  <==================|===========>  /  "
+	printf "$W""______"
+	printf "$RED""  \   -/   "
+	printf "$W""(@)\n"
+	printf "$RED""    |)    |  "
+	printf "$W""/  ||  \ "
+	printf "$RED"" |__|_____________________|_____________|  "
+	printf "$W""/  ||  \ "
+	printf "$RED"" | [ "
+	printf "$W""(@)\n"
+	printf "$RED""    \____ | "
+	printf "$W""|---()---| "
+	printf "$RED""|______________________________________| "
+	printf "$W""|---()---| "
+	printf "$RED""|_/ \n"
+	printf "$W""             \__||__/                                            \__||__/ \n"
+	sleep 0.5
+	clear
+	printf "$RED""                                                                        ___ \n"
+	printf "                                  _____________________________________ //  \n"
+	printf "                                / /-----------|  |----------| |--------- \ \n"
+	printf "                              / /             |  |          | |           \ \n"
+	printf "                            / /               |  |          | |           | \n"
+	printf "                 _________/ /                 |  |          | |           | \n"
+	printf "        _______"
+	printf "$YELLOW""("
+	printf "$RED""|___________\_________________|  |----------===============\  \n"
+	printf "$RED""      /                  |           (=)       |           (=)|            "
+	printf "$YELLOW""/\ \n"
+	printf "$RED""    /                   |      "
+	printf "$PURPLE""cgarrot"
+	printf "$RED""        |                |           "
+	printf "$YELLOW""\/"
+	printf "$RED""\     "
+	printf "$W""(@) (@)\n"
+	printf "$RED""   /"
+	printf "$YELLOW""<>"
+	printf "$RED""      ________    |           "
+	printf "$PURPLE""Script"
+	printf "$RED""    |                |________      \     "
+	printf "$W""(@)\n"
+	printf "$RED""   |      /  "
+	printf "$W""______"
+	printf "$RED""  \   |  <==================|===========>  /  "
+	printf "$W""______"
+	printf "$RED""  \   -/   "
+	printf "$W""(@)\n"
+	printf "$RED""   |)    |  "
+	printf "$W""/ \  / \ "
+	printf "$RED"" |__|_____________________|_____________|  "
+	printf "$W""/ \  / \ "
+	printf "$RED"" | [ "
+	printf "$W""(@)\n"
+	printf "$RED""   \____ | "
+	printf "$W""|   ()   | "
+	printf "$RED""|______________________________________| "
+	printf "$W""|   ()   | "
+	printf "$RED""|_/ \n"
+	printf "$W""            \_/__\_/                                            \_/__\_/ \n"
+	sleep 0.5
+	clear
+	printf "$RED""                                                                       ___ \n"
+	printf "                                 _____________________________________ //  \n"
+	printf "                               / /-----------|  |----------| |--------- \ \n"
+	printf "                             / /             |  |          | |           \ \n"
+	printf "                           / /               |  |          | |           | \n"
+	printf "                _________/ /                 |  |          | |           | \n"
+	printf "       _______"
+	printf "$YELLOW""("
+	printf "$RED""|___________\_________________|  |----------===============\  \n"
+	printf "$RED""     /                  |           (=)       |           (=)|            "
+	printf "$YELLOW""/\ "
+	printf "       "
+	printf "$W""(@) (@)\n"
+	printf "$RED""   /                   |      "
+	printf "$PURPLE""cgarrot"
+	printf "$RED""        |                |           "
+	printf "$YELLOW""\/"
+	printf "$RED""\     "
+	printf "$W""(@) (@)\n"
+	printf "$RED""  /"
+	printf "$YELLOW""<>"
+	printf "$RED""      ________    |           "
+	printf "$PURPLE""Script"
+	printf "$RED""    |                |________      \     "
+	printf "$W""(@)\n"
+	printf "$RED""  |      /  "
+	printf "$W""______"
+	printf "$RED""  \   |  <==================|===========>  /  "
+	printf "$W""______"
+	printf "$RED""  \   -/   "
+	printf "$W""(@)\n"
+	printf "$RED""  |)    |  "
+	printf "$W""/  ||  \ "
+	printf "$RED"" |__|_____________________|_____________|  "
+	printf "$W""/  ||  \ "
+	printf "$RED"" | [ "
+	printf "$W""(@)\n"
+	printf "$RED""  \____ | "
+	printf "$W""|---()---| "
+	printf "$RED""|______________________________________| "
+	printf "$W""|---()---| "
+	printf "$RED""|_/ \n"
+	printf "$W""           \__||__/                                            \__||__/ \n"
+	sleep 0.5
+	clear
+	printf "$RED""                                                                      ___ \n"
+	printf "                                _____________________________________ //  \n"
+	printf "                              / /-----------|  |----------| |--------- \ \n"
+	printf "                            / /             |  |          | |           \ \n"
+	printf "                          / /               |  |          | |           | \n"
+	printf "               _________/ /                 |  |          | |           | \n"
+	printf "      _______"
+	printf "$YELLOW""("
+	printf "$RED""|___________\_________________|  |----------===============\          "
+	printf "$W""(@)\n"
+	printf "$RED""    /                  |           (=)       |           (=)|            "
+	printf "$YELLOW""/\ "
+	printf "       "
+	printf "$W""(@) (@)\n"
+	printf "$RED""  /                   |      "
+	printf "$PURPLE""cgarrot"
+	printf "$RED""        |                |           "
+	printf "$YELLOW""\/"
+	printf "$RED""\     "
+	printf "$W""(@) (@)\n"
+	printf "$RED"" /"
+	printf "$YELLOW""<>"
+	printf "$RED""      ________    |           "
+	printf "$PURPLE""Script"
+	printf "$RED""    |                |________      \     "
+	printf "$W""(@)\n"
+	printf "$RED"" |      /  "
+	printf "$W""______"
+	printf "$RED""  \   |  <==================|===========>  /  "
+	printf "$W""______"
+	printf "$RED""  \   -/   "
+	printf "$W""(@)\n"
+	printf "$RED"" |)    |  "
+	printf "$W""/ \  / \ "
+	printf "$RED"" |__|_____________________|_____________|  "
+	printf "$W""/ \  / \ "
+	printf "$RED"" | [ "
+	printf "$W""(@)\n"
+	printf "$RED"" \____ | "
+	printf "$W""|   ()   | "
+	printf "$RED""|______________________________________| "
+	printf "$W""|   ()   | "
+	printf "$RED""|_/ \n"
+	printf "$W""          \_/__\_/                                            \_/__\_/ \n"
+	sleep 0.5
+}
+
+function lsound7()
+{
+	while :
+	do
+		clear
+		header
+		printf "Select sound for ls :\n"
+		printf " (0) wakawaka\n"
+		printf " (1) weee-hahaha-oh\n"
+		printf " (2) wtf_boom\n"
+		printf " (3) zeldaitem\n"
+		printf " (4) ahhhhhhh\n"
+		printf " (5) \n"
+		printf " (6) \n"
+		printf " (7) \n"
+		printf " (8) \n"
+		printf " (9) \n\n"
+
+		printf " (-) page 6 \n"
+		printf " (+) page 1 \n\n"
+		printf " (m) go to menu | (q) quit\n"
+		read -p $'Number :' -n 1 KEY
+		case $KEY in
+				0)
+					SOUND='wakawaka.swf.mp3'
+					lsound_s
+					;;
+				1)
+					SOUND='weee-hahaha-oh.mp3'
+					lsound_s
+					;;
+				2)
+					SOUND='wtf_boom.mp3'
+					lsound_s
+					;;
+				3)
+					SOUND='zeldaitem.swf.mp3'
+					lsound_s
+					;;
+				4)
+					SOUND='ahhhhhhh.mp3'
+					lsound_s
+					;;
+				5)
+					SOUND=''
+					;;
+				6)
+					SOUND=''
+					;;
+				7)
+					SOUND=''
+					;;
+				8)
+					SOUND=''
+					;;
+				9)
+					SOUND=''
+					;;
+				-)
+					lsound6
+					;;
+				+)
+					lsound1
+					;;
+				m)
+					menu
+					;;
+				q)
+					clear
+					exit
+					;;
+		esac
+		read -p $'\nPress Enter to continue...' END
+	done
+}
+
+function lsound6()
+{
+	while :
+	do
+		clear
+		header
+		printf "Select sound for ls :\n"
+		printf " (0) surprise-motherfucker\n"
+		printf " (1) swaggityswagger\n"
+		printf " (2) ta-gueule_2\n"
+		printf " (3) thisissparta\n"
+		printf " (4) tindeck_1\n"
+		printf " (5) trollolol\n"
+		printf " (6) tuturu_1\n"
+		printf " (7) untitled_1071\n"
+		printf " (8) untitled_291\n"
+		printf " (9) victoryff\n\n"
+
+		printf " (-) page 5 \n"
+		printf " (+) page 7 \n\n"
+		printf " (m) go to menu | (q) quit\n"
+		read -p $'Number :' -n 1 KEY
+		case $KEY in
+				0)
+					SOUND='surprise-motherfucker.mp3'
+					lsound_s
+					;;
+				1)
+					SOUND='swaggityswagger.mp3'
+					lsound_s
+					;;
+				2)
+					SOUND='ta-gueule_2.mp3'
+					lsound_s
+					;;
+				3)
+					SOUND='thisissparta.swf.mp3'
+					lsound_s
+					;;
+				4)
+					SOUND='tindeck_1.mp3'
+					lsound_s
+					;;
+				5)
+					SOUND='trollolol.swf.mp3'
+					lsound_s
+					;;
+				6)
+					SOUND='tuturu_1.mp3'
+					lsound_s
+					;;
+				7)
+					SOUND='untitled_1071.mp3'
+					lsound_s
+					;;
+				8)
+					SOUND='untitled_291.mp3'
+					lsound_s
+					;;
+				9)
+					SOUND='victoryff.swf.mp3'
+					lsound_s
+					;;
+				-)
+					lsound5
+					;;
+				+)
+					lsound7
+					;;
+				m)
+					menu
+					;;
+				q)
+					clear
+					exit
+					;;
+		esac
+		read -p $'\nPress Enter to continue...' END
+	done
+}
+
+function lsound5()
+{
+	while :
+	do
+		clear
+		header
+		printf "Select sound for ls :\n"
+		printf " (0) pascal-op\n"
+		printf " (1) perfect-fart\n"
+		printf " (2) ps\n"
+		printf " (3) r2d2\n"
+		printf " (4) sadtrombone\n"
+		printf " (5) salut-cest-pascal-pre-parez-vos-chattes-pascal-la-cascade\n"
+		printf " (6) shutup\n"
+		printf " (7) sncf-france-jingle\n"
+		printf " (8) snoop-dogg-smoke-weed-everyday\n"
+		printf " (9) sound-9\n\n"
+
+		printf " (-) page 4 \n"
+		printf " (+) page 6 \n\n"
+		printf " (m) go to menu | (q) quit\n"
+		read -p $'Number :' -n 1 KEY
+		case $KEY in
+				0)
+					SOUND='pascal-op.mp3'
+					lsound_s
+					;;
+				1)
+					SOUND='perfect-fart.mp3'
+					lsound_s
+					;;
+				2)
+					SOUND='ps_1.mp3'
+					lsound_s
+					;;
+				3)
+					SOUND='r2d2.swf.mp3'
+					lsound_s
+					;;
+				4)
+					SOUND='sadtrombone.swf.mp3'
+					lsound_s
+					;;
+				5)
+					SOUND='salut-cest-pascal-pre-parez-vos-chattes-pascal-la-cascade.mp3'
+					lsound_s
+					;;
+				6)
+					SOUND='shutup.swf.mp3'
+					lsound_s
+					;;
+				7)
+					SOUND='sncf-france-jingle.mp3'
+					lsound_s
+					;;
+				8)
+					SOUND='snoop-dogg-smoke-weed-everyday.mp3'
+					lsound_s
+					;;
+				9)
+					SOUND='sound-9______.mp3'
+					lsound_s
+					;;
+				-)
+					lsound4
+					;;
+				+)
+					lsound6
+					;;
+				m)
+					menu
+					;;
+				q)
+					clear
+					exit
+					;;
+		esac
+		read -p $'\nPress Enter to continue...' END
+	done
+}
+
+function lsound4()
+{
+	while :
+	do
+		clear
+		header
+		printf "Select sound for ls :\n"
+		printf " (0) mlb\n"
+		printf " (1) mlg-airhorn\n"
+		printf " (2) mon-film\n"
+		printf " (3) motus-boule-noire\n"
+		printf " (4) movie\n"
+		printf " (5) nani\n"
+		printf " (6) naruto-sad-music-instant\n"
+		printf " (7) naruto-shippuden-feel\n"
+		printf " (8) narutos-theme-song\n"
+		printf " (9) no-god-please-no-noooooooooo\n\n"
+
+		printf " (-) page 3 \n"
+		printf " (+) page 5 \n\n"
+		printf " (m) go to menu | (q) quit\n"
+		read -p $'Number :' -n 1 KEY
+		case $KEY in
+				0)
+					SOUND='mlb.swf.mp3'
+					lsound_s
+					;;
+				1)
+					SOUND='mlg-airhorn.mp3'
+					lsound_s
+					;;
+				2)
+					SOUND='mon-film_1.mp3'
+					lsound_s
+					;;
+				3)
+					SOUND='motus-boule-noire.mp3'
+					lsound_s
+					;;
+				4)
+					SOUND='movie_1.mp3'
+					lsound_s
+					;;
+				5)
+					SOUND='nani_Pmxf5n3.mp3'
+					lsound_s
+					;;
+				6)
+					SOUND='naruto-sad-music-instant.mp3'
+					lsound_s
+					;;
+				7)
+					SOUND='naruto-shippuden-feel.mp3'
+					lsound_s
+					;;
+				8)
+					SOUND='narutos-theme-song_hhxgHBa.mp3'
+					lsound_s
+					;;
+				9)
+					SOUND='no-god-please-no-noooooooooo.mp3'
+					lsound_s
+					;;
+				-)
+					lsound3
+					;;
+				+)
+					lsound5
+					;;
+				m)
+					menu
+					;;
+				q)
+					clear
+					exit
+					;;
+		esac
+		read -p $'\nPress Enter to continue...' END
+	done
+}
+
+function lsound3()
+{
+	while :
+	do
+		clear
+		header
+		printf "Select sound for ls :\n"
+		printf " (0) george-micael-wham-careless-whisper\n"
+		printf " (1) gg\n"
+		printf " (2) haaaaaaaaaaaaaaaaaaaaaaa\n"
+		printf " (3) hallelujahshort\n"
+		printf " (4) inceptionbutton\n"
+		printf " (5) jecodeaveclecul\n"
+		printf " (6) jesuispasvenupoursouffrir\n"
+		printf " (7) joke_drum_effect\n"
+		printf " (8) kamehameha\n"
+		printf " (9) leroy\n\n"
+
+		printf " (-) page 2 \n"
+		printf " (+) page 4 \n\n"
+		printf " (m) go to menu | (q) quit\n"
+		read -p $'Number :' -n 1 KEY
+		case $KEY in
+				0)
+					SOUND='george-micael-wham-careless-whisper-1.mp3'
+					lsound_s
+					;;
+				1)
+					SOUND='gg.mp3'
+					lsound_s
+					;;
+				2)
+					SOUND='haaaaaaaaaaaaaaaaaaaaaaa.mp3'
+					lsound_s
+					;;
+				3)
+					SOUND='hallelujahshort.swf.mp3'
+					lsound_s
+					;;
+				4)
+					SOUND='inceptionbutton.mp3'
+					lsound_s
+					;;
+				5)
+					SOUND='jecodeaveclecul.mp3'
+					lsound_s
+					;;
+				6)
+					SOUND='jesuispasvenupoursouffrir.mp3'
+					lsound_s
+					;;
+				7)
+					SOUND='joke_drum_effect.mp3'
+					lsound_s
+					;;
+				8)
+					SOUND='kamehameha.swf.mp3'
+					lsound_s
+					;;
+				9)
+					SOUND='leroy.swf.mp3'
+					lsound_s
+					;;
+				-)
+					lsound2
+					;;
+				+)
+					lsound4
+					;;
+				m)
+					menu
+					;;
+				q)
+					clear
+					exit
+					;;
+		esac
+		read -p $'\nPress Enter to continue...' END
+	done
+}
+
+function lsound2()
+{
+	while :
+	do
+		clear
+		header
+		printf "Select sound for ls :\n"
+		printf " (0) denis-brogniart-ah-original\n"
+		printf " (1) dramatic\n"
+		printf " (2) dun_dun\n"
+		printf " (3) engineer_no01\n"
+		printf " (4) epic\n"
+		printf " (5) erro\n"
+		printf " (6) euh-nique-ta-mere-marine-le-pen\n"
+		printf " (7) fuckoff\n"
+		printf " (8) fus-ro-dah\n"
+		printf " (9) gamecube_intro\n\n"
+
+		printf " (-) page 1 \n"
+		printf " (+) page 3 \n\n"
+		printf " (m) go to menu | (q) quit\n"
+		read -p $'Number :' -n 1 KEY
+		case $KEY in
+				0)
+					SOUND='denis-brogniart-ah-original.mp3'
+					lsound_s
+					;;
+				1)
+					SOUND='dramatic.swf.mp3'
+					lsound_s
+					;;
+				2)
+					SOUND='dun_dun_1.mp3'
+					lsound_s
+					;;
+				3)
+					SOUND='engineer_no01.mp3'
+					lsound_s
+					;;
+				4)
+					SOUND='epic.swf_1.mp3'
+					lsound_s
+					;;
+				5)
+					SOUND='erro.mp3'
+					lsound_s
+					;;
+				6)
+					SOUND='euh-nique-ta-mere-marine-le-pen.mp3'
+					lsound_s
+					;;
+				7)
+					SOUND='fuckoff.mp3'
+					lsound_s
+					;;
+				8)
+					SOUND='fus-ro-dah.mp3'
+					lsound_s
+					;;
+				9)
+					SOUND='gamecube_intro.mp3'
+					lsound_s
+					;;
+				-)
+					lsound1
+					;;
+				+)
+					lsound3
+					;;
+				m)
+					menu
+					;;
+				q)
+					clear
+					exit
+					;;
+		esac
+		read -p $'\nPress Enter to continue...' END
+	done
+}
+
+
+function lsound1()
+{
+	while :
+	do
+		clear
+		header
+		printf "Select sound for ls :\n"
+		printf " (0) amine-mojito-zbeub-zbeub\n"
+		printf " (1) and-his-name-is-john-cena\n"
+		printf " (2) arroto_-_timo_pra_msg\n"
+		printf " (3) badumtss\n"
+		printf " (4) boom_9\n"
+		printf " (5) boomheadshot\n"
+		printf " (6) chewbacca\n"
+		printf " (7) coucou\n"
+		printf " (8) crickets\n"
+		printf " (9) cyka-blyat\n\n"
+
+		printf " (-) page 7 \n"
+		printf " (+) page 2 \n\n"
+		printf " (m) go to menu | (q) quit\n"
+		read -p $'Number :' -n 1 KEY
+		case $KEY in
+				0)
+					SOUND='amine-mojito-zbeub-zbeub.mp3'
+					lsound_s
+					;;
+				1)
+					SOUND='and-his-name-is-john-cena-1.mp3'
+					lsound_s
+					;;
+				2)
+					SOUND='arroto_-_timo_pra_msg.mp3'
+					lsound_s
+					;;
+				3)
+					SOUND='badumtss.swf.mp3'
+					lsound_s
+					;;
+				4)
+					SOUND='boom_9.mp3'
+					lsound_s
+					;;
+				5)
+					SOUND='boomheadshot.swf.mp3'
+					lsound_s
+					;;
+				6)
+					SOUND='chewbacca.swf.mp3'
+					lsound_s
+					;;
+				7)
+					SOUND='coucou.mp3'
+					lsound_s
+					;;
+				8)
+					SOUND='crickets.swf.mp3'
+					lsound_s
+					;;
+				9)
+					SOUND='cyka-blyat.mp3'
+					lsound_s
+					;;
+				+)
+					lsound2
+					;;
+				-)
+					lsound7
+					;;
+				m)
+					menu
+					;;
+				q)
+					clear
+					exit
+					;;
+		esac
+		read -p $'\nPress Enter to continue...' END
+	done
+}
+
+function lsound_max()
+{
+	i=1
+
+	while [ '$i > 0' ]
+	do
+		osascript -e "set volume output volume 100"
+		i=$[$i+1]
+	done
+}
+
+function lsound_do_ohmyzsh()
+{
+	if [ -f ~/.oh-my-zsh/custom/alias.zsh ]
+	then
+		mv ~/.oh-my-zsh/custom/alias.zsh ~/.oh-my-zsh/custom/.aliassave
+	fi
+	touch ~/.oh-my-zsh/custom/alias.zsh
+	echo "alias ls='(afplay --volume 255 ~/.${SOUND} & \$1 && ls)'" > ~/.oh-my-zsh/custom/alias.zsh
+	cp ./sound/${SOUND} ~/.${SOUND}
+}
+
+function lsound_do_zsh()
+{
+	if [ -f ~/.bashrc ]
+	then
+		cp ~/.bashrc ~/.bashrcsave
+	fi
+	touch ~/.bashrc
+	echo "alias ls='(afplay --volume 255 ~/.${SOUND} & \$1 && ls)'" > ~/.bashrc
+	cp ./sound/${SOUND} ~/.${SOUND}
+}
+
+function lsound_rm_ohmyzsh()
+{
+	rm ~/.oh-my-zsh/custom/alias.zsh
+	if [ -f ~/.oh-my-zsh/custom/.aliassave ]
+	then
+		mv ~/.oh-my-zsh/custom/.aliassave ~/.oh-my-zsh/custom/alias.zsh
+	fi
+	rm ~/.*.mp3
+}
+
+function lsound_rm_zsh()
+{
+	rm ~/.bashrc
+	if [ -f ~/.oh-my-zsh/custom/.bashrcsave ]
+	then
+		mv ~/.bashrcsave ~/.bashrc
+	fi
+	rm ~/.*.mp3
+}
+
+function lsound_s()
+{
+	while :
+	do
+		header
+		printf " (1) oh my zsh \n"
+		printf " (2) zsh \n\n"
+
+		printf " (m) go to menu | (q) quit\n"
+		read -p $'Number : ' -n 1 KEY
+		case $KEY in
+				1)
+					lsound_do_ohmyzsh
+				;;
+				2)
+					lsound_do_zsh
+				;;
+				m)
+					menu
+					;;
+				q)
+					clear
+					exit
+					;;
+		esac
+		read -p $'\nPress Enter to continue...' END
+	done
+}
+
+function wallpaper_changer()
+{
+	while :
+	do
+		clear
+		header
+		read -p $'Enter your name image : ' KEY_SEARCH
+		./google_image/google_images_download/google_images_download.py -k $KEY_SEARCH -l 1 -f jpg
+		mv ./downloads/${KEY_SEARCH}/* ~/Desktop/.image.jpg
+		rm -rf ./downloads/*
+		clear
+		header
+		sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '~/Desktop/.image.jpg'" && killall Dock
+		printf " (m) go to menu | (q) quit\n"
+		read -p $'Number :' -n 1 NUM
+		case $NUM in
+				m)
+					menu
+				;;
+				q)
+					clear
+					exit
+				;;
+		esac
+		read -p $'\nPress Enter to continue...' END
+	done
+	rm ~/Desktop/.*.jpg
+	clear
+}
+
+function header()
+{
+	clear
+	printf "███████╗ ██████╗██████╗ ██╗██████╗ ████████╗     █████╗     ██╗      █████╗     ███████╗ ██████╗ ██████╗\n"
+	printf "██╔════╝██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝    ██╔══██╗    ██║     ██╔══██╗    ╚══███╔╝██╔═══██╗██╔══██╗\n"
+	printf "███████╗██║     ██████╔╝██║██████╔╝   ██║       ███████║    ██║     ███████║      ███╔╝ ██║   ██║██████╔╝\n"
+	printf "╚════██║██║     ██╔══██╗██║██╔═══╝    ██║       ██╔══██║    ██║     ██╔══██║     ███╔╝  ██║   ██║██╔══██╗\n"
+	printf "███████║╚██████╗██║  ██║██║██║        ██║       ██║  ██║    ███████╗██║  ██║    ███████╗╚██████╔╝██████╔╝\n"
+	printf "╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝       ╚═╝  ╚═╝    ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝ ╚═════╝ \n\n"
+}
+
+function menu()
+{
+	while :
+	do
+		header
+		printf " (1) ls with sound \n"
+		printf " (2) wallpaper changer \n"
+		printf " (3) coming soon \n"
+		printf " (4) credit \n"
+		printf " (5) quit \n\n"
+		read -p $'Selection : ' -n 1 INPUT
+		case $INPUT in
+				1)
+					lsound1
+				;;
+				2)
+					wallpaper_changer
+				;;
+				3)
+					multipla
+				;;
+				4) 
+					clear
+					exit
+				;;
+				q)
+					clear
+					exit
+				;;
+				o)
+					lsound_rm_ohmyzsh
+				;;
+				b)
+					lsound_rm_zsh
+				;;
+		esac
+		read -p $'\nPress Enter to continue...' END
+	done
+	clear
+}
+
+header
+read -n 1 -s -r -p "I am ready to make me tig, press key"
+clear
+menu
