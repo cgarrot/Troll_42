@@ -6,3 +6,4 @@ BODY=$(./html2text/html2text.py --ignore-links --ignore-image ~/.page_wiki_body)
 USER_NAME=$(whoami)
 echo $BODY | mail -s $TITLE ${USER_NAME}@student.le-101.fr
 rm ~/.page_wiki ~/.page_wiki_body ~/.page_wiki_title
+history -c
