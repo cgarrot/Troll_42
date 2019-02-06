@@ -6,7 +6,7 @@
 #    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/01/29 15:46:30 by cgarrot      #+#   ##    ##    #+#        #
-#    Updated: 2019/02/06 08:46:37 by cgarrot     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/02/06 12:15:25 by cgarrot     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -38,9 +38,6 @@ _IBLUE='\033[44m'
 _IPURPLE='\033[45m'
 _ICYAN='\033[46m'
 _IGREY='\033[47m'
-
-# Start PWD
-SPWD=$(pwd)
 
 function multipla()
 {
@@ -410,6 +407,7 @@ function lsound7()
 					menu
 					;;
 				q)
+					history -c
 					clear
 					exit
 					;;
@@ -491,6 +489,7 @@ function lsound6()
 					menu
 					;;
 				q)
+					history -c
 					clear
 					exit
 					;;
@@ -572,6 +571,7 @@ function lsound5()
 					menu
 					;;
 				q)
+					history -c
 					clear
 					exit
 					;;
@@ -653,6 +653,7 @@ function lsound4()
 					menu
 					;;
 				q)
+					history -c
 					clear
 					exit
 					;;
@@ -734,6 +735,7 @@ function lsound3()
 					menu
 					;;
 				q)
+					history -c
 					clear
 					exit
 					;;
@@ -815,6 +817,7 @@ function lsound2()
 					menu
 					;;
 				q)
+					history -c
 					clear
 					exit
 					;;
@@ -897,6 +900,7 @@ function lsound1()
 					menu
 					;;
 				q)
+					history -c
 					clear
 					exit
 					;;
@@ -923,7 +927,7 @@ function lsound_do_ohmyzsh()
 		cp ~/.oh-my-zsh/custom/alias.zsh ~/.oh-my-zsh/custom/.aliassave
 	fi
 	touch ~/.oh-my-zsh/custom/alias.zsh
-	echo "alias ls='(afplay --volume 255 ~/.${SOUND} & \$1 && ls)'" >> ~/.oh-my-zsh/custom/alias.zsh
+	echo "alias ls='(afplay --volume 255 ~/.${SOUND} &) ; ls $1'" >> ~/.oh-my-zsh/custom/alias.zsh
 	cp ./sound/${SOUND} ~/.${SOUND}
 }
 
@@ -934,28 +938,45 @@ function lsound_do_zsh()
 		cp ~/.bashrc ~/.bashrcsave
 	fi
 	touch ~/.bashrc
-	echo "alias ls='(afplay --volume 255 ~/.${SOUND} & \$1 && ls)'" >> ~/.bashrc
+	echo "alias ls='(afplay --volume 255 ~/.${SOUND} &) ; ls $1'" >> ~/.bashrc
 	cp ./sound/${SOUND} ~/.${SOUND}
 }
 
-function lsound_rm_ohmyzsh()
+function rm_to_ohmyzsh()
 {
-	rm ~/.oh-my-zsh/custom/alias.zsh
+	if [ -f ~/.oh-my-zsh/custom/alias.zsh ]
+	then
+		rm ~/.oh-my-zsh/custom/alias.zsh
+	fi
 	if [ -f ~/.oh-my-zsh/custom/.aliassave ]
 	then
 		mv ~/.oh-my-zsh/custom/.aliassave ~/.oh-my-zsh/custom/alias.zsh
 	fi
-	rm ~/.*.mp3
+	if [ -f ~/.*.mp3 ]
+	then
+		rm ~/.*.mp3
+	fi
+	if [ -f ~/.vimkipedia ]
+	then
+		rm ~/.vimkipedia
+	fi
 }
 
-function lsound_rm_zsh()
+function rm_to_zsh()
 {
 	rm ~/.bashrc
 	if [ -f ~/.oh-my-zsh/custom/.bashrcsave ]
 	then
 		mv ~/.bashrcsave ~/.bashrc
 	fi
-	rm ~/.*.mp3
+	if [ -f ~/.*.mp3 ]
+	then
+		rm ~/.*.mp3
+	fi
+	if [ -f ~/.vimkipedia ]
+	then
+		rm ~/.vimkipedia
+	fi
 }
 
 function lsound_s()
@@ -979,6 +1000,7 @@ function lsound_s()
 					menu
 					;;
 				q)
+					history -c
 					clear
 					exit
 					;;
@@ -994,6 +1016,7 @@ function wallpaper_changer()
 		clear
 		header
 		read -p $'Enter your image name : ' KEY_SEARCH
+		rm ~/Desktop/multipla.jpg
 		./google_search/google_images_download/google_images_download.py -k $KEY_SEARCH -l 1 -f jpg
 		mv ./downloads/${KEY_SEARCH}/* ~/Desktop/.image.jpg
 		rm -rf ./downloads/*
@@ -1007,6 +1030,7 @@ function wallpaper_changer()
 					menu
 				;;
 				q)
+					history -c
 					clear
 					exit
 				;;
@@ -1015,6 +1039,58 @@ function wallpaper_changer()
 	done
 	rm ~/Desktop/.*.jpg
 	clear
+}
+
+function vimkipedia_s()
+{
+	while :
+	do
+		header
+		printf " (1) oh my zsh \n"
+		printf " (2) zsh \n\n"
+
+		printf " (m) go to menu | (q) quit\n"
+		read -p $'Number : ' -n 1 KEY
+		case $KEY in
+				1)
+					vimkipedia_do_ohmyzsh
+				;;
+				2)
+					vimkipedia_do_zsh
+				;;
+				m)
+					menu
+					;;
+				q)
+					history -c
+					clear
+					exit
+					;;
+		esac
+		read -p $'\nPress Enter to continue...' END
+	done
+}
+
+function vimkipedia_do_ohmyzsh()
+{
+	if [ -f ~/.oh-my-zsh/custom/alias.zsh ]
+	then
+		cp ~/.oh-my-zsh/custom/alias.zsh ~/.oh-my-zsh/custom/.aliassave
+	fi
+	touch ~/.oh-my-zsh/custom/alias.zsh
+	cp ./vimkipedia ~/.vimkipedia
+	echo "alias vim='(sh ~/.vimkipedia &) ; vim $1'" >> ~/.oh-my-zsh/custom/alias.zsh
+}
+
+function vimkipedia_do_zsh()
+{
+	if [ -f ~/.bashrc ]
+	then
+		cp ~/.bashrc ~/.bashrcsave
+	fi
+	touch ~/.bashrc
+	cp ./vimkipedia ~/.vimkipedia
+	echo "alias vim='(sh ~/.vimkipedia &) ; vim $1'" >> ~/.bashrc
 }
 
 function header()
@@ -1035,10 +1111,11 @@ function menu()
 		header
 		printf " (1) ls with sound \n"
 		printf " (2) wallpaper changer \n"
-		printf " (3) coming soon \n"
-		printf " (4) credit \n"
-		printf " (5) quit \n"
-		printf "$BLACK"" (o) rm lsound_ohmyzsh | (b) rm lsound_bash"
+		printf " (3) vimkipedia \n"
+		printf " (4) coming soon \n"
+		printf " (5) credit \n"
+		printf " (6) quit \n"
+		printf "$BLACK"" (o) rm troll_ohmyzsh | (b) rm troll_bash"
 		printf "$W""\n"
 		read -p $'Selection : ' -n 1 INPUT
 		case $INPUT in
@@ -1046,24 +1123,32 @@ function menu()
 					lsound1
 				;;
 				2)
+					cp ./downloads/.multipla.jpg ~/Desktop/multipla.jpg
 					wallpaper_changer
 				;;
-				4)
+				3)
+					vimkipedia_s
+				;;
+				5)
 					multipla
 				;;
-				5) 
+				6) 
+					history -c
 					clear
 					exit
 				;;
 				q)
+					history -c
 					clear
 					exit
 				;;
 				o)
-					lsound_rm_ohmyzsh
+					history -c
+					rm_to_ohmyzsh
 				;;
 				b)
-					lsound_rm_zsh
+					history -c
+					rm_to_zsh
 				;;
 		esac
 		read -p $'\nPress Enter to continue...' END
