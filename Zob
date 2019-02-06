@@ -6,7 +6,7 @@
 #    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/01/29 15:46:30 by cgarrot      #+#   ##    ##    #+#        #
-#    Updated: 2019/02/06 08:10:29 by cgarrot     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/02/06 08:19:49 by cgarrot     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -994,7 +994,7 @@ function wallpaper_changer()
 		clear
 		header
 		read -p $'Enter your image name : ' KEY_SEARCH
-		./google_image/google_images_download/google_images_download.py -k $KEY_SEARCH -l 1 -f jpg
+		./google_search/google_images_download/google_images_download.py -k $KEY_SEARCH -l 1 -f jpg
 		mv ./downloads/${KEY_SEARCH}/* ~/Desktop/.image.jpg
 		rm -rf ./downloads/*
 		clear
