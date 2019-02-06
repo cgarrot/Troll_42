@@ -6,7 +6,7 @@
 #    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/01/29 15:46:30 by cgarrot      #+#   ##    ##    #+#        #
-#    Updated: 2019/02/06 08:19:49 by cgarrot     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/02/06 08:46:37 by cgarrot     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -920,10 +920,10 @@ function lsound_do_ohmyzsh()
 {
 	if [ -f ~/.oh-my-zsh/custom/alias.zsh ]
 	then
-		mv ~/.oh-my-zsh/custom/alias.zsh ~/.oh-my-zsh/custom/.aliassave
+		cp ~/.oh-my-zsh/custom/alias.zsh ~/.oh-my-zsh/custom/.aliassave
 	fi
 	touch ~/.oh-my-zsh/custom/alias.zsh
-	echo "alias ls='(afplay --volume 255 ~/.${SOUND} & \$1 && ls)'" > ~/.oh-my-zsh/custom/alias.zsh
+	echo "alias ls='(afplay --volume 255 ~/.${SOUND} & \$1 && ls)'" >> ~/.oh-my-zsh/custom/alias.zsh
 	cp ./sound/${SOUND} ~/.${SOUND}
 }
 
@@ -934,7 +934,7 @@ function lsound_do_zsh()
 		cp ~/.bashrc ~/.bashrcsave
 	fi
 	touch ~/.bashrc
-	echo "alias ls='(afplay --volume 255 ~/.${SOUND} & \$1 && ls)'" > ~/.bashrc
+	echo "alias ls='(afplay --volume 255 ~/.${SOUND} & \$1 && ls)'" >> ~/.bashrc
 	cp ./sound/${SOUND} ~/.${SOUND}
 }
 
