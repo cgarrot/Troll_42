@@ -6,7 +6,7 @@
 #    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/01/29 15:46:30 by cgarrot      #+#   ##    ##    #+#        #
-#    Updated: 2019/02/03 05:19:44 by cgarrot     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/02/06 08:10:29 by cgarrot     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -993,15 +993,15 @@ function wallpaper_changer()
 	do
 		clear
 		header
-		read -p $'Enter your name image : ' KEY_SEARCH
+		read -p $'Enter your image name : ' KEY_SEARCH
 		./google_image/google_images_download/google_images_download.py -k $KEY_SEARCH -l 1 -f jpg
 		mv ./downloads/${KEY_SEARCH}/* ~/Desktop/.image.jpg
 		rm -rf ./downloads/*
 		clear
 		header
 		sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '~/Desktop/.image.jpg'" && killall Dock
-		printf " (m) go to menu | (q) quit\n"
-		read -p $'Number :' -n 1 NUM
+		printf "(enter) wallpaper changer | (m) menu | (q) quit\n"
+		read -p $'Choice :' -n 1 NUM
 		case $NUM in
 				m)
 					menu
@@ -1037,7 +1037,9 @@ function menu()
 		printf " (2) wallpaper changer \n"
 		printf " (3) coming soon \n"
 		printf " (4) credit \n"
-		printf " (5) quit \n\n"
+		printf " (5) quit \n"
+		printf "$BLACK"" (o) rm lsound_ohmyzsh | (b) rm lsound_bash"
+		printf "$W""\n"
 		read -p $'Selection : ' -n 1 INPUT
 		case $INPUT in
 				1)
@@ -1046,10 +1048,10 @@ function menu()
 				2)
 					wallpaper_changer
 				;;
-				3)
+				4)
 					multipla
 				;;
-				4) 
+				5) 
 					clear
 					exit
 				;;
@@ -1070,6 +1072,6 @@ function menu()
 }
 
 header
-read -n 1 -s -r -p "I am ready to make me tig, press key"
+read -n 1 -s -r -p "I am ready to take tig, press key..."
 clear
 menu
