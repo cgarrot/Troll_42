@@ -10,4 +10,5 @@ Un script qui vous servira surement lors des piscines :
 ![Zob](https://i.imgur.com/MwgsTL3.png)
 
 (*)Attention pour le wallpaper changer il faut déjà que le fond d'écran sois modifié
+
 (*2)Attention si vous êtes a 42 vous devez modifier le mail @student.le-101.fr par @student.42.fr
