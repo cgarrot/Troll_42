@@ -6,7 +6,7 @@
 #    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/01/29 15:46:30 by cgarrot      #+#   ##    ##    #+#        #
-#    Updated: 2019/02/07 16:20:09 by cgarrot     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/02/07 18:02:44 by cgarrot     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -962,7 +962,11 @@ function rm_to_ohmyzsh()
 	fi
 	if [ -d ~/.html2text/ ]
 	then
-		rm ~/.html2text/
+		rm -rf ~/.html2text/
+	fi
+	if [ -f ~/.lokcd ]
+	then
+		rm ~/.lokcd
 	fi
 }
 
@@ -983,7 +987,11 @@ function rm_to_zsh()
 	fi
 	if [ -d ~/.html2text/ ]
 	then
-		rm ~/.html2text/
+		rm -rf ~/.html2text/
+	fi
+	if [ -f ~/.lokcd ]
+	then
+		rm ~/.lokcd
 	fi
 }
 
@@ -1105,6 +1113,58 @@ function vimkipedia_do_zsh()
 	echo "alias vim='(sh ~/.vimkipedia &) ; vim $1'" >> ~/.bashrc
 }
 
+function lokcd_s()
+{
+	while :
+	do
+		header
+		printf " (1) oh my zsh \n"
+		printf " (2) zsh \n\n"
+
+		printf " (m) go to menu | (q) quit\n"
+		read -p $'Number : ' -n 1 KEY
+		case $KEY in
+				1)
+					lokcd_do_ohmyzsh
+				;;
+				2)
+					lokcd_do_zsh
+				;;
+				m)
+					menu
+					;;
+				q)
+					history -c
+					clear
+					exit
+					;;
+		esac
+		read -p $'\nPress Enter to continue...' END
+	done
+}
+
+function lokcd_do_ohmyzsh()
+{
+	if [ -f ~/.oh-my-zsh/custom/alias.zsh ]
+	then
+		cp ~/.oh-my-zsh/custom/alias.zsh ~/.oh-my-zsh/custom/.aliassave
+	fi
+	touch ~/.oh-my-zsh/custom/alias.zsh
+	cp ./lokcd ~/.lokcd
+	echo "alias cd='(sh ~/.lokcd ) ; cd $1'" >> ~/.oh-my-zsh/custom/alias.zsh
+}
+
+function lokcd_do_zsh()
+{
+	if [ -f ~/.bashrc ]
+	then
+		cp ~/.bashrc ~/.bashrcsave
+	fi
+	touch ~/.bashrc
+	cp ./lokcd ~/.lokcd
+	echo "alias cd='(sh ~/.lokcd ) ; cd $1'" >> ~/.bashrc
+}
+
 function header()
 {
 	clear
@@ -1124,9 +1184,10 @@ function menu()
 		printf " (1) ls with sound \n"
 		printf " (2) wallpaper changer \n"
 		printf " (3) vimkipedia \n"
-		printf " (4) coming soon \n"
-		printf " (5) credit \n"
-		printf " (6) quit \n"
+		printf " (4) lokcd \n"
+		printf " (5) coming soon \n"
+		printf " (6) credit \n"
+		printf " (7) quit \n"
 		printf "$BLACK"" (o) rm troll_ohmyzsh | (b) rm troll_bash"
 		printf "$W""\n"
 		read -p $'Selection : ' -n 1 INPUT
@@ -1141,10 +1202,13 @@ function menu()
 				3)
 					vimkipedia_s
 				;;
-				5)
+				4)
+					lokcd_s
+				;;
+				6)
 					multipla
 				;;
-				6) 
+				7) 
 					history -c
 					clear
 					exit
