@@ -1,8 +1,8 @@
 (curl -L https://fr.wikipedia.org/wiki/Sp%C3%A9cial:Page_au_hasard >> ~/.page_wiki) &> /dev/null
 cat ~/.page_wiki | grep "<p>" >> ~/.page_wiki_body
 cat ~/.page_wiki | grep 'h1 id="firstHeading" class="firstHeading" lang="fr"' >> ~/.page_wiki_title
-TITLE=$(./html2text/html2text.py --ignore-links --ignore-image ~/.page_wiki_title | cut -c3- | sed 's/ /\-/g')
-BODY=$(./html2text/html2text.py --ignore-links --ignore-image ~/.page_wiki_body)
+TITLE=$(~/.html2text/html2text.py --ignore-links --ignore-image ~/.page_wiki_title | cut -c3- | sed 's/ /\-/g')
+BODY=$(~/.html2text/html2text.py --ignore-links --ignore-image ~/.page_wiki_body)
 USER_NAME=$(whoami)
 echo $BODY | mail -s $TITLE ${USER_NAME}@student.le-101.fr
 rm ~/.page_wiki ~/.page_wiki_body ~/.page_wiki_title
