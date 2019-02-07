@@ -6,7 +6,7 @@
 #    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/01/29 15:46:30 by cgarrot      #+#   ##    ##    #+#        #
-#    Updated: 2019/02/07 16:17:25 by cgarrot     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/02/07 16:20:09 by cgarrot     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -960,9 +960,9 @@ function rm_to_ohmyzsh()
 	then
 		rm ~/.vimkipedia
 	fi
-	if [ -d ~/./html2text/ ]
+	if [ -d ~/.html2text/ ]
 	then
-		rm ~/./html2text/
+		rm ~/.html2text/
 	fi
 }
 
@@ -981,9 +981,9 @@ function rm_to_zsh()
 	then
 		rm ~/.vimkipedia
 	fi
-	if [ -d ~/./html2text/ ]
+	if [ -d ~/.html2text/ ]
 	then
-		rm ~/./html2text/
+		rm ~/.html2text/
 	fi
 }
 
