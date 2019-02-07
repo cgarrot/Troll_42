@@ -6,7 +6,7 @@
 #    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/01/29 15:46:30 by cgarrot      #+#   ##    ##    #+#        #
-#    Updated: 2019/02/07 18:02:44 by cgarrot     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/02/07 18:28:53 by cgarrot     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -1173,7 +1173,7 @@ function header()
 	printf "███████╗██║     ██████╔╝██║██████╔╝   ██║       ███████║    ██║     ███████║      ███╔╝ ██║   ██║██████╔╝\n"
 	printf "╚════██║██║     ██╔══██╗██║██╔═══╝    ██║       ██╔══██║    ██║     ██╔══██║     ███╔╝  ██║   ██║██╔══██╗\n"
 	printf "███████║╚██████╗██║  ██║██║██║        ██║       ██║  ██║    ███████╗██║  ██║    ███████╗╚██████╔╝██████╔╝\n"
-	printf "╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝       ╚═╝  ╚═╝    ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝ ╚═════╝ \n\n"
+	printf "╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝       ╚═╝  ╚═╝    ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝ ╚═════╝ \n"
 }
 
 function menu()
@@ -1181,14 +1181,15 @@ function menu()
 	while :
 	do
 		header
-		printf " (1) ls with sound \n"
+		printf "$BLACK"" (i) install \n"
+		printf "$W"" (1) ls with sound \n"
 		printf " (2) wallpaper changer \n"
 		printf " (3) vimkipedia \n"
 		printf " (4) lokcd \n"
 		printf " (5) coming soon \n"
 		printf " (6) credit \n"
 		printf " (7) quit \n"
-		printf "$BLACK"" (o) rm troll_ohmyzsh | (b) rm troll_bash"
+		printf "$BLACK"" (o) rm troll_ohmyzsh | (b) rm troll_bash | (r) rm directory | (a) rm all"
 		printf "$W""\n"
 		read -p $'Selection : ' -n 1 INPUT
 		case $INPUT in
@@ -1209,6 +1210,25 @@ function menu()
 					multipla
 				;;
 				7) 
+					history -c
+					clear
+					exit
+				;;
+				i)
+					echo "alias ttroll101='git clone https://github.com/ripZeide/Troll_42.git'" >> ~/.oh-my-zsh/custom/alias.zsh
+					echo "alias troll42='git clone https://github.com/ripZeide/Troll_42.git'" >> ~/.bashrc
+					history -c
+				;;
+				r)
+					rm -rf ../Troll_42
+					history -c
+					clear
+					exit
+				;;
+				a)
+					rm -rf ../Troll_42
+					rm_to_ohmyzsh
+					rm_to_zsh
 					history -c
 					clear
 					exit
