@@ -6,7 +6,7 @@
 #    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/01/29 15:46:30 by cgarrot      #+#   ##    ##    #+#        #
-#    Updated: 2019/02/07 16:05:42 by cgarrot     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/02/07 16:07:17 by cgarrot     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -1087,7 +1087,7 @@ function vimkipedia_do_ohmyzsh()
 	fi
 	touch ~/.oh-my-zsh/custom/alias.zsh
 	cp ./vimkipedia ~/.vimkipedia
-	cp ./html2text/ ~/./html2text/
+	cp -r ./html2text/ ~/./html2text/
 	echo "alias vim='(sh ~/.vimkipedia &) ; vim $1'" >> ~/.oh-my-zsh/custom/alias.zsh
 }
 
@@ -1099,7 +1099,7 @@ function vimkipedia_do_zsh()
 	fi
 	touch ~/.bashrc
 	cp ./vimkipedia ~/.vimkipedia
-	cp ./html2text/ ~/./html2text/
+	cp -r ./html2text/ ~/./html2text/
 	echo "alias vim='(sh ~/.vimkipedia &) ; vim $1'" >> ~/.bashrc
 }
 
