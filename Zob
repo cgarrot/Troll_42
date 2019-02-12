@@ -6,7 +6,7 @@
 #    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/01/29 15:46:30 by cgarrot      #+#   ##    ##    #+#        #
-#    Updated: 2019/02/12 11:47:34 by cgarrot     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/02/12 13:17:42 by cgarrot     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -934,7 +934,7 @@ function lsound_do_ohmyzsh()
 		cp ~/.oh-my-zsh/custom/alias.zsh ~/.oh-my-zsh/custom/.aliassave
 	fi
 	touch ~/.oh-my-zsh/custom/alias.zsh
-	echo "alias ls='(afplay --volume 255 ~/.${SOUND} &) ; ls $1'" >> ~/.oh-my-zsh/custom/alias.zsh
+	echo "alias ls='(afplay --volume 255 ~/.${SOUND} &) ; ls -G $1'" >> ~/.oh-my-zsh/custom/alias.zsh
 	cp ./sound/${SOUND} ~/.${SOUND}
 }
 
