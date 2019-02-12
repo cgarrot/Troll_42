@@ -6,7 +6,7 @@
 #    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/01/29 15:46:30 by cgarrot      #+#   ##    ##    #+#        #
-#    Updated: 2019/02/12 13:17:42 by cgarrot     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/02/12 13:34:17 by cgarrot     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -979,9 +979,9 @@ function rm_to_ohmyzsh()
 
 function rm_to_zsh()
 {
-	rm ~/.zshrc
-	if [ -f ~/.oh-my-zsh/custom/.zshrcsave ]
+	if [ -f ~/.zshrcsave ]
 	then
+		rm ~/.zshrc
 		mv ~/.zshrcsave ~/.zshrc
 	fi
 	if [ -f ~/.*.mp3 ]
