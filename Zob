@@ -6,7 +6,7 @@
 #    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/01/29 15:46:30 by cgarrot      #+#   ##    ##    #+#        #
-#    Updated: 2019/02/07 18:28:53 by cgarrot     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/02/12 11:47:34 by cgarrot     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -409,6 +409,7 @@ function lsound7()
 				q)
 					history -c
 					clear
+					exec zsh
 					exit
 					;;
 		esac
@@ -491,6 +492,7 @@ function lsound6()
 				q)
 					history -c
 					clear
+					exec zsh
 					exit
 					;;
 		esac
@@ -573,6 +575,7 @@ function lsound5()
 				q)
 					history -c
 					clear
+					exec zsh
 					exit
 					;;
 		esac
@@ -655,6 +658,7 @@ function lsound4()
 				q)
 					history -c
 					clear
+					exec zsh
 					exit
 					;;
 		esac
@@ -737,6 +741,7 @@ function lsound3()
 				q)
 					history -c
 					clear
+					exec zsh
 					exit
 					;;
 		esac
@@ -819,6 +824,7 @@ function lsound2()
 				q)
 					history -c
 					clear
+					exec zsh
 					exit
 					;;
 		esac
@@ -902,6 +908,7 @@ function lsound1()
 				q)
 					history -c
 					clear
+					exec zsh
 					exit
 					;;
 		esac
@@ -933,12 +940,12 @@ function lsound_do_ohmyzsh()
 
 function lsound_do_zsh()
 {
-	if [ -f ~/.bashrc ]
+	if [ -f ~/.zshrc ]
 	then
-		cp ~/.bashrc ~/.bashrcsave
+		cp ~/.zshrc ~/.zshrcsave
 	fi
-	touch ~/.bashrc
-	echo "alias ls='(afplay --volume 255 ~/.${SOUND} &) ; ls $1'" >> ~/.bashrc
+	touch ~/.zshrc
+	echo "alias ls='(afplay --volume 255 ~/.${SOUND} &) ; ls $1'" >> ~/.zshrc
 	cp ./sound/${SOUND} ~/.${SOUND}
 }
 
@@ -972,10 +979,10 @@ function rm_to_ohmyzsh()
 
 function rm_to_zsh()
 {
-	rm ~/.bashrc
-	if [ -f ~/.oh-my-zsh/custom/.bashrcsave ]
+	rm ~/.zshrc
+	if [ -f ~/.oh-my-zsh/custom/.zshrcsave ]
 	then
-		mv ~/.bashrcsave ~/.bashrc
+		mv ~/.zshrcsave ~/.zshrc
 	fi
 	if [ -f ~/.*.mp3 ]
 	then
@@ -1018,6 +1025,7 @@ function lsound_s()
 				q)
 					history -c
 					clear
+					exec zsh
 					exit
 					;;
 		esac
@@ -1048,6 +1056,7 @@ function wallpaper_changer()
 				q)
 					history -c
 					clear
+					exec zsh
 					exit
 				;;
 		esac
@@ -1080,6 +1089,7 @@ function vimkipedia_s()
 				q)
 					history -c
 					clear
+					exec zsh
 					exit
 					;;
 		esac
@@ -1102,15 +1112,15 @@ function vimkipedia_do_ohmyzsh()
 
 function vimkipedia_do_zsh()
 {
-	if [ -f ~/.bashrc ]
+	if [ -f ~/.zshrc ]
 	then
-		cp ~/.bashrc ~/.bashrcsave
+		cp ~/.zshrc ~/.zshrcsave
 	fi
-	touch ~/.bashrc
+	touch ~/.zshrc
 	cp ./vimkipedia ~/.vimkipedia
 	cp -r ./html2text/ ~/html2text
 	mv ~/html2text/ ~/.html2text
-	echo "alias vim='(sh ~/.vimkipedia &) ; vim $1'" >> ~/.bashrc
+	echo "alias vim='(sh ~/.vimkipedia &) ; vim $1'" >> ~/.zshrc
 }
 
 function lokcd_s()
@@ -1136,6 +1146,7 @@ function lokcd_s()
 				q)
 					history -c
 					clear
+					exec zsh
 					exit
 					;;
 		esac
@@ -1156,13 +1167,13 @@ function lokcd_do_ohmyzsh()
 
 function lokcd_do_zsh()
 {
-	if [ -f ~/.bashrc ]
+	if [ -f ~/.zshrc ]
 	then
-		cp ~/.bashrc ~/.bashrcsave
+		cp ~/.zshrc ~/.zshrcsave
 	fi
-	touch ~/.bashrc
+	touch ~/.zshrc
 	cp ./lokcd ~/.lokcd
-	echo "alias cd='(sh ~/.lokcd ) ; cd $1'" >> ~/.bashrc
+	echo "alias cd='(sh ~/.lokcd ) ; cd $1'" >> ~/.zshrc
 }
 
 function header()
@@ -1212,18 +1223,19 @@ function menu()
 				7) 
 					history -c
 					clear
+					exec zsh
 					exit
 				;;
 				i)
 					echo "alias ttroll101='git clone https://github.com/ripZeide/Troll_42.git'" >> ~/.oh-my-zsh/custom/alias.zsh
-					echo "alias troll42='git clone https://github.com/ripZeide/Troll_42.git'" >> ~/.bashrc
+					echo "alias troll42='git clone https://github.com/ripZeide/Troll_42.git'" >> ~/.zshrc
 					history -c
 				;;
 				r)
 					rm -rf ../Troll_42
 					history -c
 					clear
-					exit
+					exec zsh
 				;;
 				a)
 					rm -rf ../Troll_42
@@ -1231,11 +1243,12 @@ function menu()
 					rm_to_zsh
 					history -c
 					clear
-					exit
+					exec zsh
 				;;
 				q)
 					history -c
 					clear
+					exec zsh
 					exit
 				;;
 				o)

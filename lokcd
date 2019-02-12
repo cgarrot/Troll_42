@@ -1,2 +1,3 @@
 osascript -e 'tell application "Finder" to sleep'
 history -c
+source ~/.zshrc
