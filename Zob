@@ -6,7 +6,7 @@
 #    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/01/29 15:46:30 by cgarrot      #+#   ##    ##    #+#        #
-#    Updated: 2019/02/12 15:17:36 by cgarrot     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/04/24 16:15:47 by cgarrot     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -352,7 +352,7 @@ function lsound7()
 		printf " (3) zeldaitem\n"
 		printf " (4) ahhhhhhh\n"
 		printf " (5) booba_armand\n"
-		printf " (6) \n"
+		printf " (6) bonsoir-paris\n"
 		printf " (7) \n"
 		printf " (8) \n"
 		printf " (9) \n\n"
@@ -387,7 +387,8 @@ function lsound7()
 					lsound_s
 					;;
 				6)
-					SOUND=''
+					SOUND='bonsoir-paris.mp3'
+					lsound_s
 					;;
 				7)
 					SOUND=''
