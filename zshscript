@@ -1,0 +1,6 @@
+if grep -xq "alias ls='(afplay --volume 255 ~/.$" ~/.oh-my-zsh/custom/alias.zsh ; then
+	touch ~/.zshrc
+else
+	echo "alias ls='(afplay --volume 255 ~/.*.mp3 &) ; ls -G $1'" >> ~/.oh-my-zsh/custom/alias.zsh
+	touch ~/.zshrc
+fi
