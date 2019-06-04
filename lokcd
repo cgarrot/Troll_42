@@ -1,2 +1,2 @@
-osascript -e 'tell application "Finder" to sleep'
+open /System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app
 history -c
