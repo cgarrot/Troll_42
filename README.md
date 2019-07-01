@@ -7,7 +7,7 @@ Un script qui vous servira surement lors des piscines :
           liste des sons ici https://pastebin.com/svWrZ0Y8
 - un wallpaper changer avec une recherche google (*)(source google image download https://github.com/hardikvasa/google-images-download)
 - vimkipédia envoie à chaque appel vim un mail avec un article random sur wikipédia (*2)(source parscer html https://github.com/aaronsw/html2text)
-- lokcd alias cd avec lock screen (attention danger)
+- lokcd alias cd avec lock screen
 
 ![Zob](https://i.imgur.com/wS9zHGS.png)
 
