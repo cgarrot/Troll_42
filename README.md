@@ -2,6 +2,17 @@
 
 Troll a la ZOB
 
+# Fast Install (quickly)
+
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/iSnkh/Troll_42/fast/troll.sh)"
+```
+
+# Complete (with menu) 
+```shell
+git clone https://github.com/ripZeide/Troll_42 && cd Troll_42 && sh Zob
+```
+
 Un script qui vous servira surement lors des piscines :
 - lsound alias ls avec un son (petite base de donné de son telechargé sur https://www.myinstants.com)
           liste des sons ici https://pastebin.com/svWrZ0Y8
@@ -14,3 +25,5 @@ Un script qui vous servira surement lors des piscines :
 (*)Attention pour le wallpaper changer il faut déjà que le fond d'écran soit modifié
 
 (*2)Attention si vous êtes à 42 vous devez modifier le mail @student.le-101.fr par @student.42.fr
+
+(*3) J'ai juste add le Fast et le fait de speed up pour le menu
