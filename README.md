@@ -6,16 +6,19 @@ You can only use this script on macOS !
 
 ###### ZSH
 ```shell
+sh -c "$(curl -fsSL https://bit.ly/2xDLkxF)" ||
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ripZeide/Troll_42/master/fast_troll/troll_zsh.sh)"
 ```
 ###### Oh my ZSH
 ```shell
+sh -c "$(curl -fsSL https://bit.ly/2SaN379)" ||
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ripZeide/Troll_42/master/fast_troll/troll_oh_my_zsh.sh)"
 ```
 
 ## Fast Remove Troll (quickly remove lsound)
 
 ```shell
+sh -c "$(curl -fsSL https://bit.ly/2NLtC6A)" ||
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ripZeide/Troll_42/master/fast_troll/rm_troll.sh)"
 ```
 
