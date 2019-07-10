@@ -1,6 +1,6 @@
 # Troll_42
 
-Troll a la ZOB
+You can only use this script on macOS !
 
 ## Fast Install (quickly install lsound)
 
