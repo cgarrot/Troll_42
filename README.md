@@ -2,10 +2,16 @@
 
 Troll a la ZOB
 
-# Fast Install (quickly)
+# Fast Install ZSH (quickly)
 
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/iSnkh/Troll_42/fast/troll.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/iSnkh/Troll_42/fast/troll_zsh.sh)"
+```
+
+# Fast Install Oh my ZSH (quickly)
+
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/iSnkh/Troll_42/fast/troll_oh_my_zsh.sh)"
 ```
 
 # Complete (with menu) 
