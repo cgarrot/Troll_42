@@ -2,22 +2,20 @@
 
 Troll a la ZOB
 
-## Fast Install ZSH
+## Fast Install
 #### (quickly install lsound)
 
+###### ZSH
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ripZeide/Troll_42/master/fast_troll/troll_zsh.sh)"
 ```
-
-## Fast Install Oh my ZSH
-#### (quickly Install lsound)
-
+###### Oh my ZSH
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ripZeide/Troll_42/master/fast_troll/troll_oh_my_zsh.sh)"
 ```
 
-# Fast Remove Troll
-#### (quickly remove lsound)
+## Fast Remove Troll
+###### (quickly remove lsound)
 
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ripZeide/Troll_42/master/fast_troll/rm_troll.sh)"
