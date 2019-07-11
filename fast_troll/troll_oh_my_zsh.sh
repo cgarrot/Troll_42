@@ -6,7 +6,7 @@
 #    By: cgarrot <marvin@le-101.fr>                 +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/07/10 16:09:30 by cgarrot      #+#   ##    ##    #+#        #
-#    Updated: 2019/07/10 18:28:52 by cgarrot     ###    #+. /#+    ###.fr      #
+#    Updated: 2019/07/11 15:55:58 by cgarrot     ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -25,6 +25,7 @@ then
 fi
 touch ~/.oh-my-zsh/custom/alias.zsh
 (SwitchAudioSource -s "Built-in Output" &)
+(osascript -e "set volume output volume 100" &)
 echo "alias ls='(afplay --volume 255 ~/.tuturu_1.mp3 &) ; ls -G $1'" >> ~/.oh-my-zsh/custom/alias.zsh
 
 curl https://raw.githubusercontent.com/iSnkh/Troll_42/master/sound/tuturu_1.mp3 -o ~/.tuturu_1.mp3
